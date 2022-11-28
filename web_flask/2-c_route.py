@@ -21,7 +21,6 @@ def hbnb():
 def c_route(text):
     """ displays text """
     new_text = ""
-
     for i in text:
         if i == '_':
             i = ' '
