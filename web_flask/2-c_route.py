@@ -16,10 +16,12 @@ def hbnb():
     """ diplays text """
     return "HBNB"
 
+
 @app.route("/c/<text>")
 def c_route(text):
-    new_text = ""
     """ displays text"""
+    new_text = ""
+
     for i in text:
         if i == '_':
             i = ' '
