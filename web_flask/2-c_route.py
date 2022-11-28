@@ -22,7 +22,7 @@ def c_route(text):
     """ displays text
         Args:
             text: a string
-        Return:
+        Returns:
             string
     """
     new_text = ""
