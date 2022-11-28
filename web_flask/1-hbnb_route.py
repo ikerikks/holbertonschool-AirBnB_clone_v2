@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""starts a web app"""
+""" starts a web app """
 
 from flask import Flask
 # from os import getenv
@@ -9,6 +9,7 @@ app = Flask(__name__)
 @app.route("/", strict_slashes=False)
 def hello_world():
     return "Hello HBNB!"
+
 
 @app.route("/hbnb", strict_slashes=False)
 def hello_world():
