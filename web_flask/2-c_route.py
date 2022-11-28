@@ -16,6 +16,16 @@ def hbnb():
     """ diplays text """
     return "HBNB"
 
+@app.route("/c/<text>")
+def c_route(text):
+    new_text = ""
+    """ displays text"""
+    for i in text:
+        if i == '_':
+            i = ' '
+        new_text += i
+    return f"C {new_text}"
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
