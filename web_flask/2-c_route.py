@@ -19,7 +19,7 @@ def hbnb():
 
 @app.route("/c/<text>")
 def c_route(text):
-    """ displays text"""
+    """ displays text """
     new_text = ""
 
     for i in text:
