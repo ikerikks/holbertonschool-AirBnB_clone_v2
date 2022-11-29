@@ -1,31 +1,31 @@
 #!/usr/bin/python3
-""" starts a web app with multiples scripts """
+""" starts a web app """
 
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template
 app = Flask(__name__)
 
 
 @app.route("/", strict_slashes=False)
 def hello_index():
-    """ diplays text on a define route """
+    """ diplays text """
     return "Hello HBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """ diplays text on a define route """
+    """ diplays text """
     return "HBNB"
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_route(text):
-    """ displays text on a define route """
+    """ displays text """
     return "C " + text.replace("_", " ")
 
 
 @app.route("/python/<text>", strict_slashes=False)
 def python_route(text):
-    """ displays text on a define route """
+    """ displays text """
     print(text)
     return "Python " + text.replace("_", " ")
 
@@ -39,8 +39,14 @@ def python(text="is cool"):
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def is_number(n):
-    """ displays a text with number on a define route """
+    """ displays text """
     return f"{n} is a number"
+
+
+@app.route("/number_template/<int:n>", strict_slashes=False)
+def is_number_template(n):
+    """ displays an html page """
+    return render_template("5-number.html")
 
 
 if __name__ == "__main__":
