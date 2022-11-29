@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-""" starts a web app 
-"""
+""" starts a web app """
 
-from flask import Flask, url_for
+from flask import Flask, url_for, render_template
 app = Flask(__name__)
 
 
@@ -45,4 +44,5 @@ def is_number(n):
 
 
 if __name__ == "__main__":
+    " check name value"
     app.run(host="0.0.0.0", port=5000, debug=True)
