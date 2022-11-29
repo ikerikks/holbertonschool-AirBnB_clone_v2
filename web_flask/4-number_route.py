@@ -37,11 +37,11 @@ def python(text="is cool"):
     return "Python " + text.replace("_", " ")
 
 
-@app.route("/number/<n>", strict_slashes=False)
+@app.route("/number/<int:n>", strict_slashes=False)
 def is_number(n):
     """ displays a text with number """
     return f"{n} is a number"
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000, debug=True)
