@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""starts a web app"""
+""" starts a web app """
 
 from flask import Flask, url_for, render_template
 app = Flask(__name__)
@@ -39,7 +39,7 @@ def python(text="is cool"):
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def is_number(n):
-    """ displays a number """
+    """ displays a text with number """
     return f"{n} is a number"
 
 
