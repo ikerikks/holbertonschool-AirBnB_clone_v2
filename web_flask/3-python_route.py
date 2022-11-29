@@ -29,6 +29,7 @@ def python_route(text):
     print(text)
     return "Python " + text.replace("_", " ")
 
+
 @app.route("/python/", strict_slashes=False)
 def python(text="is cool"):
     """ displays text """
