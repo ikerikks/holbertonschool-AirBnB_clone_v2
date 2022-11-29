@@ -7,19 +7,34 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_index():
-    """ diplays text on a define route """
+    """ diplays text on a define route
+    Args:
+        none
+    Returns:
+        text
+    """
     return "Hello HBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """ diplays text on a define route """
+    """ diplays text on a define route
+    Args:
+        none
+    Returns:
+        text
+    """
     return "HBNB"
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_route(text):
-    """ displays text on a define route """
+    """ displays text on a define route
+    Args:
+        text: string
+    Returns:
+        text
+    """
     return "C " + text.replace("_", " ")
 
 
@@ -32,20 +47,35 @@ def python_route(text):
 
 @app.route("/python/", strict_slashes=False)
 def python(text="is cool"):
-    """ displays text on a define route """
+    """ displays text on a define route
+    Args:
+        text: string
+    Returns:
+        text
+    """
     print(text)
     return "Python " + text.replace("_", " ")
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def is_number(n):
-    """ displays text on a define route """
+    """ displays text on a define route
+    Args:
+        n: integer
+    Returns:
+        text
+    """
     return f"{n} is a number"
 
 
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def is_number_template(n):
-    """ displays an html page on a define route """
+    """ displays an html page on a define route
+    Args:
+        n: integer
+    Returns:
+        html template
+    """
     return render_template("5-number.html")
 
 
