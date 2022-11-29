@@ -39,7 +39,7 @@ def python(text="is cool"):
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def is_number(n):
-    """ displays text """
+    """ displays a number """
     return f"{n} is a number"
 
 
