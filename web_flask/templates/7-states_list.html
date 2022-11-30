@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>States</h1>
-    <ul>{% for element in all_states | sort(attribute='name') %}
+    <ul>{% for element in states | sort(attribute='name') %}
         <li>{{element.id}}: <b>{{element.name}}</b></li>
             {% endfor %}
     </ul>
