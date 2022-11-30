@@ -76,7 +76,7 @@ def is_number_template(n):
     Returns:
         html template
     """
-    return render_template("5-number.html")
+    return render_template("5-number.html", num=n)
 
 
 if __name__ == "__main__":
