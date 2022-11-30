@@ -9,15 +9,18 @@
 <body>
     <h1>States</h1>
     <ul>
-        {% for element in states | sort(attribute='name') %}
-        <li>{{element.id}}: <b>{{element.name}}</b></li>
+	    {% for state in states|sort(attribute="name") %}
+	        <li>{{ state.id }}: <b>{{ state.name }}</b>
+		        <ul>
+		            {% for city in cities|sort(attribute="name") %}
+			            {% if city.state_id == state.id %}
+		                <li>{{ city.id }}: <b>{{ city.name }}</b></li>
+                    {% endif %}
+                    {% endfor %}    
+                </ul>
+            </li>
         {% endfor %}
     </ul>
-    <ul>
-        {% for city in element.cities | sort(attribute='name') %}
-        <li>{{ city.id }}: <b>{{ city.name }</b></li>
-        {% endfor %}
-    </ul>
-
+    
 </body>
 </html>
