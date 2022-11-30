@@ -10,13 +10,12 @@
     <h1>States</h1>
     <ul>
         {% for element in states | sort(attribute='name') %}
-        <li>{{element.id}}: <b>{{element.name}}</b>
-        <ul>
-            {% for city in element.cities | sort(attribute='name') %}
-            <li>{{ city.id }}: <b>{{ city.name }</b></li>
-            {% endfor %}
-        </ul>
-        </li>
+        <li>{{element.id}}: <b>{{element.name}}</b></li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for city in element.cities | sort(attribute='name') %}
+        <li>{{ city.id }}: <b>{{ city.name }</b></li>
         {% endfor %}
     </ul>
 
