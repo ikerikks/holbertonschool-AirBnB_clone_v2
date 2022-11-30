@@ -65,7 +65,7 @@ def is_number(n):
     Returns:
         text
     """
-    return f"{n} is a number"
+    return "{} is a number".format(n)
 
 
 @app.route("/number_template/<int:n>", strict_slashes=False)
